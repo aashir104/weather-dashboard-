@@ -1,4 +1,3 @@
-//-----ELEMENT DECLARATION-----//
 var searchheader = document.querySelector(".search-input");
 var searchaddin = document.querySelector("#searchCity");
 var weatherCurrent = document.querySelector("#current-weather");
@@ -60,14 +59,7 @@ var fetchMe = function(city) {
     })
 }
 
-//-----SUBMIT BUTTON FUNCTION ------------------
-var weatherSearch = function(event) 
-{
-    event.preventDefault();
-    var city = searchaddin.value;
-    searchaddin.value = "";
-    fetchMe(city);
-}
+
 
 //-----DISPLAYS THE CURRENT WEATHER DETAILS-----//
 var currentDisplay = function(data, city) 
@@ -139,6 +131,8 @@ var weatherForForecast = function(data)
     forecastSection.className = "d-flex forecastFlex";
 
     //-----LOOP TO DISPLAY WEATHER-----
+    console.log();
+
     for (var i=0; i<data.daily.length; i++) 
     {
         var date = moment((data.daily[i].dt)*1000).format("YYYY-MM-DD");
@@ -160,7 +154,7 @@ var weatherForForecast = function(data)
             forecastSection.appendChild(dayDisplay);
         }
     }
-    forecast.appendChild(forecastHead);
+    forecast.appendChild(forecastHeadervc);
     forecast.appendChild(forecastSection);
 }
 
@@ -178,6 +172,14 @@ var saveSearch = function(city)
         searchHistory.splice(0,0,city);
         localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
     }
+}
+//-----SUBMIT BUTTON FUNCTION ------------------
+var weatherSearch = function(event) 
+{
+    event.preventDefault();
+    var city = searchaddin.value;
+    searchaddin.value = "";
+    fetchMe(city);
 }
 
 //-----HISTORY FOR SEARCH BUTTON-----
