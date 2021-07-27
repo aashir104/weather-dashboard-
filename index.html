@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    
+   
+    <link rel="stylesheet" href="CSS/style.css" />
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <header class="text-center">
+        <h1 class="col p-2 page-header">Weather Dashboard</h1>
+    </header>
+
+    <div class="row">
+        
+        <div class="col-12 col-md-3 d-flex flex-column">
+           
+            <section class="ml-md-2 citySearch">
+                <h2 class="my-2">Search a City</h2>
+                <form class="d-flex flex-column search-input pb-2">
+                    <input type="text" id="searchCity" placeholder="Enter city name" class="my-2 p-2">
+                    <button class="btn btn-primary text-center my-2" type="submit">Search</button>
+                </form>
+            </section>
+            
+            <section id="search-history" class="pt-2 ml-md-2 search-history">
+            </section>
+        </div>
+        
+        <div class="col-12 col-md-9 d-flex flex-column mt-3">
+            
+            <section id="current-weather" class="mr-md-3">
+            </section>
+            
+            <section class="forecast mr-3">
+            </section>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
