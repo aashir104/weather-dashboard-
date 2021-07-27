@@ -2,7 +2,7 @@
     font-family: 'Roboto Slab', serif;
 }
 
-
+/*-----PAGE HEADER DISPLAY-----*/
 .page-header {
     background-image: linear-gradient(45deg, #3976a8 10%, #39329c 52%, #4a108b 90%);
     color: white;
@@ -95,8 +95,14 @@
     margin-bottom: 10px;
 }
 
+/*-----ERROR MESSAGE STYLE ELEMENTS-----*/
+.warning {
+    font-size: 26px;
+    color: red;
+}
+
 @media screen and (max-width: 1400px) {
-    
+    /*-----FORCAST DISPLAY-----*/
     .dayDisplay {
         padding: 10px 10px 10px 10px;
     }
