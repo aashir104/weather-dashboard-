@@ -154,7 +154,7 @@ var weatherForForecast = function(data)
             forecastSection.appendChild(dayDisplay);
         }
     }
-    forecast.appendChild(forecastHeadervc);
+    forecast.appendChild(forecastHeader);
     forecast.appendChild(forecastSection);
 }
 
